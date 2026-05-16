@@ -23,3 +23,6 @@ contentArea.addEventListener('click', event => {
         playContentAudio(audioFile); // Play the audio file for the clicked image
     }
 });
+
+// Create overlay spans for navigation images using each image's alt text
+// Overlay spans are added directly in the HTML now; no JS injection needed.
