@@ -2,24 +2,24 @@
 
 // script.js - Handles audio playback for content images only
 
-const rustleAudio = document.getElementById('rustle-audio');
-const contentArea = document.querySelector('main');
+const rustleAudio = document.getElementById('rustle-audio'); // Find the audio element in the page with id "rustle-audio"
+const contentArea = document.querySelector('main'); // Find the first <main> element in the page to listen for clicks there
 
 // Play a specific audio file for the clicked content image
 function playContentAudio(audioFile) {
     if (!audioFile) {
-        return;
+        return; // If there is no audio file path, stop and do nothing
     }
-    rustleAudio.src = audioFile;
-    rustleAudio.currentTime = 0;
-    rustleAudio.play();
+    rustleAudio.src = audioFile; // Set the audio element's source to the chosen audio file
+    rustleAudio.currentTime = 0; // Reset playback to the start of the audio file
+    rustleAudio.play(); // Start playing the audio
 }
 
 // Handle clicks on content images using event delegation
 contentArea.addEventListener('click', event => {
-    const target = event.target;
-    if (target.matches('.clickable-image')) {
-        const audioFile = target.getAttribute('data-audio');
-        playContentAudio(audioFile);
+    const target = event.target; // The actual element that was clicked
+    if (target.matches('.clickable-image')) { // Check if that element has the class "clickable-image"
+        const audioFile = target.getAttribute('data-audio'); // Read the audio file path stored in the element
+        playContentAudio(audioFile); // Play the audio file for the clicked image
     }
 });
