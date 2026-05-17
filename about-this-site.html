@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>HC Portfolio Site</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- header -->
+    <header>
+        <h1>Hugh Cramer Professional Orientation Portfolio S1 2026</h1>
+        <h2>This site uses audio</h2>
+    </header>
+    <!-- nav -->
+    <aside>
+        <nav>
+            <ul>
+                <li>
+                    <a href="index.html">
+                        <img id="nav1" src="images/site/about-me.png" alt="About Me" class="nav-image">
+                        <p>About Me</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="page2.html">
+                        <img id="nav2" src="images/site/nav2.jpg" alt="Navigation Item 2" class="nav-image">
+                        <p>Navigation Item 2</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="page3.html">
+                        <img id="nav3" src="images/site/nav3.jpg" alt="Navigation Item 3" class="nav-image">
+                        <p>Navigation Item 3</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="page4.html">
+                        <img id="nav4" src="images/site/nav4.jpg" alt="Navigation Item 4" class="nav-image">
+                        <p>Navigation Item 4</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="about-this-site.html">
+                        <img id="nav5" src="images/site/about-this-site.webp" alt="About This Site" class="nav-image">
+                        <p>About This Site</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="page6.html">
+                        <img id="nav6" src="images/site/nav6.jpg" alt="Navigation Item 6" class="nav-image">
+                        <p>Navigation Item 6</p>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- content -->
+    <main>
+        <div class="content-section">
+            <div class="cntent-section">
+                <h1>About This Site</h1>
+                <p>This is the first paragraph on the left side. It contains some sample text to demonstrate the layout.
+                    The
+                    paragraph is positioned next to the image on the right.</p>
+            </div>
+            <img class="clickable-image" src="images/content/green-me.png" alt="A green polaroid picture of me"
+                data-audio="audio/hello.mp3">
+        </div>
+        <p>This is a full-width paragraph below the image. It spans the entire content area and provides more
+            information.</p>
+        <p>paper Sound Effect by <a
+                href="https://pixabay.com/users/creatorshome-49707711/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=336933"
+                target="_blank">CreatorsHome</a> from <a
+                href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=336933"
+                target="_blank">Pixabay</a></p>
+
+    </main>
+
+    <!-- Hidden audio element for paper rustle sound -->
+    <audio id="rustle-audio" src="audio/rustle.mp3" preload="auto"></audio>
+
+    <!-- JavaScript for click handling and audio -->
+    <script src="script.js"></script>
+</body>
+
+</html>
