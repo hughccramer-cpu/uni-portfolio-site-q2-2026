@@ -41,6 +41,7 @@ header h1 {
 
 header h2 {
     font-size: 1.2rem;
+    text-decoration: underline;
 }
 
 /* the thing that makes it fit right */
@@ -69,7 +70,7 @@ aside ul {
 }
 
 aside ul li img {
-    width: 200px;
+    width: 220px;
     display: block;
 }
 
