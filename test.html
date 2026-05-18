@@ -1,55 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <title>HC Portfolio Site</title>
-    <link rel="stylesheet" href="styles-test.css">
+  <meta charset="UTF-8">
+  <title>My Site</title>
 </head>
-
 <body>
 
-    <aside>
-        <nav>
-            <ul>
-                <li>
-                    <a href="index.html">
-                        <img id="nav1" src="images/site/about-me.png" alt="About Me" class="nav-image">
-                        <p>About Me</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="page2.html">
-                        <img id="nav2" src="images/site/nav2.jpg" alt="Navigation Item 2" class="nav-image">
-                        <p>Navigation Item 2</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="page3.html">
-                        <img id="nav3" src="images/site/nav3.jpg" alt="Navigation Item 3" class="nav-image">
-                        <p>Navigation Item 3</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="page4.html">
-                        <img id="nav4" src="images/site/nav4.jpg" alt="Navigation Item 4" class="nav-image">
-                        <p>Navigation Item 4</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="page5.html">
-                        <img id="nav5" src="images/site/about-this-site.webp" alt="Navigation Item 5" class="nav-image">
-                        <p>Navigation Item 5</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="page6.html">
-                        <img id="nav6" src="images/site/nav6.jpg" alt="Navigation Item 6" class="nav-image">
-                        <p>Navigation Item 6</p>
-                    </a>
-                </li>
-            </ul>
-        </nav>
-    </aside>
+  <!-- 
+    PAGE LOAD SOUND
+    ===============
+    The <audio> element loads your MP3 but doesn't play it yet.
+    'preload="auto"' tells the browser to load the file immediately.
+  -->
+  <audio id="page-sound" src="sounds/page-turn.mp3" preload="auto"></audio>
+
+  <!-- 
+    CLICKABLE IMAGES
+    ================
+    Each image has:
+      - a normal <img> tag
+      - a data-sound attribute pointing to its unique MP3
+      - onclick calling playSound() with 'this' (the clicked element)
+  -->
+  <img
+    src="images/site/nav1.jpg"
+    alt="Description of photo 1"
+    data-sound="audio/hello.mp3"
+    onclick="playSound(this)"
+    style="cursor: pointer;"
+  />
+
+  <img
+    src="images/photo2.jpg"
+    alt="Description of photo 2"
+    data-sound="sounds/sound2.mp3"
+    onclick="playSound(this)"
+    style="cursor: pointer;"
+  />
+
+  <img
+    src="images/photo3.jpg"
+    alt="Description of photo 3"
+    data-sound="sounds/sound3.mp3"
+    onclick="playSound(this)"
+    style="cursor: pointer;"
+  />
+
+
+  <script>
+    // -------------------------------------------------------
+    // PAGE LOAD SOUND
+    // -------------------------------------------------------
+
+    // OPTION A — Play immediately on load.
+    // This WILL be blocked by most browsers on first visit
+    // unless the user has interacted with your site before.
+    window.addEventListener('load', function () {
+      document.getElementById('page-sound').play();
+    });
+
+
+    // OPTION B — Play on the first user interaction (recommended).
+    // Comment out Option A and uncomment this block instead.
+    // It listens for any click anywhere on the page, plays the
+    // sound once, then removes itself so it doesn't fire again.
+    /*
+    document.addEventListener('click', function playOnFirstInteraction() {
+      document.getElementById('page-sound').play();
+      document.removeEventListener('click', playOnFirstInteraction);
+    }, { once: true });
+    */
+
+
+    // -------------------------------------------------------
+    // CLICK SOUNDS FOR IMAGES
+    // -------------------------------------------------------
+
+    // This function is called when an image is clicked.
+    // 'imgElement' is the <img> that was clicked.
+    function playSound(imgElement) {
+
+      // Read the sound file path from the data-sound attribute
+      var soundSrc = imgElement.getAttribute('data-sound');
+
+      // Create a new Audio object with that path and play it.
+      // Using 'new Audio()' each time means sounds can overlap
+      // if you click quickly — each click gets its own instance.
+      var sound = new Audio(soundSrc);
+      sound.play();
+    }
+  </script>
+
 </body>
 </html>
