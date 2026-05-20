@@ -3,4 +3,3 @@ function playSound(imgElement) {
   var sound = new Audio(soundSrc);
   sound.play();
 }
-
