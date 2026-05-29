@@ -20,7 +20,7 @@
     color: hsl(0, 0%, 22%);
     text-align: center;
     letter-spacing: 0.05em;
-    
+
 }
 
 h1 {
@@ -63,7 +63,7 @@ aside {
     background-image: url(images/site/graph-paper.jpg);
     background-size: 1500px;
 
-    
+
 }
 
 aside ul {
@@ -117,26 +117,29 @@ main {
     background-image: url(images/site/paper.jpg);
     background-size: cover;
     background-attachment: scroll;
-         box-shadow: 0px 0px 30px rgb(0, 0, 0,0.3) inset;
+    box-shadow: 0px 0px 30px rgb(0, 0, 0, 0.3) inset;
+    
 }
 
 main p {
     padding: 20px 80px;
 }
 
-.content-section {
-    display: flex;
-    margin: 20px 80px;
-    
-}
-.content-section p {
-    padding: 30px 100px;
+main h1 {
+    padding: 20px 80px;
 }
 
 main img {
-    width: 600px;
-    height: auto;
+    margin: 20px 80px;
+}
+
+.content-section {
+    display: flex;
+}
+
+main img {
     max-width: 25vw;
-    object-fit: cover;
     box-shadow: 0 0px 100px rgba(0, 0, 0, 0.3);
+    height: fit-content;
+    object-fit: contain;
 }
