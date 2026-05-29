@@ -1,3 +1,4 @@
+/* hi ben */
 /* font */
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
@@ -37,13 +38,13 @@ header {
 }
 
 header h1 {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     line-height: 1.2rem;
 }
 
 header h2 {
-    font-size: 1.2rem;
-    text-decoration: underline;
+    font-size: 1rem;
+    color: grey;
 }
 
 /* the thing that makes it fit right */
@@ -120,16 +121,16 @@ main {
 }
 
 main p {
-    padding: 20px;
+    padding: 20px 80px;
 }
 
 .content-section {
     display: flex;
-    margin: 80px 80px;
+    margin: 20px 80px;
     
 }
 .content-section p {
-    padding: 30px 120px;
+    padding: 30px 100px;
 }
 
 main img {
