@@ -26,7 +26,9 @@
 h1 {
     line-height: 2rem;
 }
-
+.italic {
+    font-style: italic;
+}
 /* header */
 header {
     grid-column: 1 / -1;
@@ -52,7 +54,7 @@ body {
     display: grid;
     grid-template-columns: 260px 1fr;
     grid-template-rows: auto 1fr;
-    min-height: 100%;
+    min-height: 100vh;
 }
 
 /* sidebar */
@@ -118,7 +120,7 @@ main {
     background-size: cover;
     background-attachment: scroll;
     box-shadow: 0px 0px 30px rgb(0, 0, 0, 0.3) inset;
-    
+
 }
 
 main p {
@@ -132,14 +134,26 @@ main h1 {
 main img {
     margin: 20px 80px;
 }
-
-.content-section {
-    display: flex;
-}
-
 main img {
     max-width: 25vw;
     box-shadow: 0 0px 100px rgba(0, 0, 0, 0.3);
     height: fit-content;
     object-fit: contain;
+}
+.content-section {
+display : flex;
+} 
+.content-section-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.content-section-grid p {
+    padding: 20px 40px;
+}
+.content-section-stack {
+    display: flex;
+    flex-direction: column;
+}
+.secret-section {
+color : rgba(0, 0, 0, 0.017);
 }
